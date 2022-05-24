@@ -22,7 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:srcCompat="@mipmap/ic_launcher" />
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/textView"
@@ -36,28 +37,30 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:backgroundTintMode="screen"
                 android:background="@drawable/rounded_gradient"
-                android:text="@string/play" />
+                android:text="@string/play"
+                android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/lottery_button"
-                android:layout_marginStart="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTintMode="screen"
                 android:background="@drawable/rounded_gradient"
-                android:text="@string/lottery" />
+                android:text="@string/lottery"
+                android:textColor="@color/white" />
+
         </LinearLayout>
 
         <TextView
+            android:id="@+id/amountOfCoins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main_coins"

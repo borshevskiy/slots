@@ -26,5 +26,9 @@
         android:id="@+id/lotteryFragment"
         android:name="com.template.LotteryFragment"
         android:label="fragment_lottery"
-        tools:layout="@layout/fragment_lottery" />
+        tools:layout="@layout/fragment_lottery" >
+        <action
+            android:id="@+id/action_lotteryFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
 </navigation>
