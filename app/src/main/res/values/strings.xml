@@ -4,5 +4,5 @@
     <string name="claim">Claim</string>
     <string name="reward">Your reward: %s coins</string>
     <string name="lottery">Lottery</string>
-    <string name="main_coins">Your coins: %s</string>
+    <string name="main_coins">Your coins: %s💸</string>
 </resources>
