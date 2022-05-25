@@ -8,9 +8,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
+import com.template.Constants.Companion.DEFAULT
+import com.template.Constants.Companion.GAME_SETTINGS
+import com.template.Constants.Companion.MONEY
 import com.template.databinding.RewardCoinsLayoutBinding
 
-class RewardCoinsDialog(private val rewardCoins: Int) : DialogFragment() {
+class StartCoinsDialog(private val rewardCoins: Int) : DialogFragment() {
 
     private lateinit var binding: RewardCoinsLayoutBinding
     private lateinit var preferences: SharedPreferences
@@ -19,17 +22,17 @@ class RewardCoinsDialog(private val rewardCoins: Int) : DialogFragment() {
         binding = RewardCoinsLayoutBinding.inflate(LayoutInflater.from(context))
         val builder = AlertDialog.Builder(requireActivity())
         builder.setView(binding.root)
-        preferences = requireActivity().getSharedPreferences("Game_settings", Context.MODE_PRIVATE)
+        preferences = requireActivity().getSharedPreferences(GAME_SETTINGS, Context.MODE_PRIVATE)
         binding.rewardText.text = String.format(getString(R.string.reward), rewardCoins)
         binding.claimButton.setOnClickListener {
-            claimMoney(preferences.getInt("Money", 0) + rewardCoins)
+            claimMoney(preferences.getInt(MONEY, DEFAULT) + rewardCoins)
             dismiss()
-            findNavController().navigate(R.id.action_lotteryFragment_to_startFragment)
+            findNavController().navigate(R.id.action_startFragment_to_gameFragment)
         }
         return builder.create()
     }
 
     private fun claimMoney(newCoins: Int) {
-        preferences.edit().putInt("Money", newCoins).apply()
+        preferences.edit().putInt(MONEY, newCoins).apply()
     }
 }

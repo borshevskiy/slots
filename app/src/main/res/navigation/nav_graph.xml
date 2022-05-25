@@ -21,7 +21,11 @@
         android:id="@+id/gameFragment"
         android:name="com.template.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
     <fragment
         android:id="@+id/lotteryFragment"
         android:name="com.template.LotteryFragment"

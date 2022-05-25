@@ -10,6 +10,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/frame_back"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,21 +28,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍋"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
 
             <TextView
                 android:id="@+id/fourTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍒"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
 
             <TextView
                 android:id="@+id/sevenTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍇"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,21 +56,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍆"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
 
             <TextView
                 android:id="@+id/fiveTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍀"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
 
             <TextView
                 android:id="@+id/eightTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="💰"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -82,21 +83,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="⭐"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
 
             <TextView
                 android:id="@+id/sixTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🔔"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
 
             <TextView
                 android:id="@+id/nineTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7️⃣"
-                android:textSize="50dp" />
+                android:textSize="75sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -111,5 +112,61 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:src="@drawable/ic_menu"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/amountOfCoins"
+        app:layout_constraintStart_toStartOf="@+id/amountOfCoins"
+        app:layout_constraintTop_toBottomOf="@+id/amountOfCoins">
+
+        <Button
+            android:id="@+id/bet_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_gradient"
+            android:text="@string/bet"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/spin_button"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_gradient"
+            android:text="@string/spin"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/betSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bet_set"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
